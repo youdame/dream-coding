@@ -37,9 +37,18 @@
   text-transform: uppercase;
   font-weight: bold;
 }
+
 .container {
-  display: flex;
-  justify-self: center;
+  width: 500px;
+  margin: auto;
+}
+
+.banner {
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 2rem;
+  background-color: gold;
+  font-weight: bold;
 }
 
 .counter {
@@ -49,11 +58,11 @@
   margin: 2rem;
   padding: 1rem;
   border-radius: 1rem;
-  border: 2px solid rgba(0, 0, 0, 0.75);
+  border: 2px solid rgb(215, 127, 12);
 }
 
 .counter:hover {
-  background-color: reg(246, 243, 196);
+  background-color: rgb(246, 243, 197);
 }
 
 .number {
@@ -65,5 +74,15 @@
   padding: 0.2rem 1rem;
   border-radius: 0.5rem;
   cursor: pointer;
-  background: yellow;
+  background: rgb(215, 127, 12);
+  background: linear-gradient(
+    90deg,
+    rgba(215, 127, 12, 1) 0%,
+    rgba(253, 220, 29, 1) 100%
+  );
+}
+
+.total {
+  font-size: 1rem;
+  margin-left: -1.5rem;
 }
