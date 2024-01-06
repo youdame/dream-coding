@@ -8,11 +8,10 @@ export default function personReducer(person, action) {
           if (mentor.name === prev) {
             return { ...mentor, name: current };
           }
-          return;
+          return mentor;
         }),
       };
     }
-
     case 'added': {
       const { name, title } = action;
       return {
@@ -20,16 +19,14 @@ export default function personReducer(person, action) {
         mentors: [...person.mentors, { name, title }],
       };
     }
-
     case 'deleted': {
-      const { name } = action;
       return {
         ...person,
-        mentors: person.mentors.filter((mentor) => mentor.name !== name),
+        mentors: person.mentors.filter((mentor) => mentor.name !== action.name),
       };
     }
     default: {
-      throw Error(`알 수 없는 액션 타입이다 : ${action.type}`);
+      throw Error(`알수없는 액션 타입이다: ${action.type}`);
     }
   }
 }

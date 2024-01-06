@@ -4,23 +4,21 @@ import { DarkModeContext, DarkModeProvider } from './context/DarkModeContext';
 
 export default function AppTheme() {
   return (
-    <>
-      <DarkModeProvider>
-        <Header />
-        <Main />
-        <Footer />
-      </DarkModeProvider>
-    </>
+    <DarkModeProvider>
+      <Header />
+      <Main />
+      <Footer />
+    </DarkModeProvider>
   );
 }
 
 function Header() {
-  return <header className="header">Header</header>;
+  return <header className='header'>Header</header>;
 }
 
 function Main() {
   return (
-    <main className="main">
+    <main className='main'>
       Main
       <Profile />
       <Products />
@@ -56,13 +54,20 @@ function ProductDetail() {
     <div>
       Product Detail
       <p>
-        DarkMode : <span>{darkMode.toString()} </span>
+        DarkMode:
+        {darkMode ? (
+          <span style={{ backgroundColor: 'black', color: 'white' }}>
+            Dark Mode
+          </span>
+        ) : (
+          <span>Light Mode</span>
+        )}
       </p>
-      <button onClick={toggleDarkMode}>Toggle</button>
+      <button onClick={() => toggleDarkMode()}>Toggle</button>
     </div>
   );
 }
 
 function Footer() {
-  return <footer className="footer">Footer</footer>;
+  return <footer className='footer'>Footer</footer>;
 }
