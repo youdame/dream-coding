@@ -21,23 +21,6 @@ export default function AppMentorsButton() {
     dispatch({ type: 'deleted', name });
   }, []);
 
-  // const handleUpdate = () => {
-  //   const prev = prompt(`누구의 이름을 바꾸고 싶은가요?`);
-  //   const current = prompt(`이름을 무엇으로 바꾸고 싶은가요?`);
-  //   dispatch({ type: 'updated', prev, current });
-  // };
-
-  // const handleAdd = () => {
-  //   const name = prompt(`멘토의 이름은?`);
-  //   const title = prompt(`멘토의 직함은?`);
-  //   dispatch({ type: 'added', name, title });
-  // };
-
-  // const handleDelete = () => {
-  //   const name = prompt(`누구를 삭제하고 싶은가요?`);
-  //   dispatch({ type: 'deleted', name });
-  // };
-
   return (
     <div>
       <h1>
@@ -51,9 +34,9 @@ export default function AppMentorsButton() {
           </li>
         ))}
       </ul>
-      <Button text="멘토의 이름을 바꾸기" onClick={handleUpdate} />
-      <Button text="멘토 추가하기" onClick={handleAdd} />
-      <Button text="멘토 삭제하기" onClick={handleDelete} />
+      <Button text='멘토 이름 바꾸기' onClick={handleUpdate} />
+      <Button text='삭제하기' onClick={handleDelete} />
+      <Button text='멘토 추가하기' onClick={handleAdd} />
     </div>
   );
 }
@@ -76,11 +59,9 @@ const Button = memo(({ text, onClick }) => {
   );
 });
 
-Button.displayName = 'Button';
-
 function calculateSomething() {
   for (let i = 0; i < 10000; i++) {
-    console.log('🥹');
+    console.log('😆');
   }
   return 10;
 }
