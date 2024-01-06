@@ -1,0 +1,16 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.todo {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
